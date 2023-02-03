@@ -1,0 +1,38 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        var number=0;
+        List<int> numberList = new List<int>();
+        
+        Console.WriteLine("Write your number list: ");
+        numberList.Add(int.Parse(Console.ReadLine()));
+        var numberOne = numberList[0];
+        numberList.Add(int.Parse(Console.ReadLine()));
+        var numberTwo = numberList[1];
+        numberList.Add(int.Parse(Console.ReadLine()));
+        var numberThree = numberList[2];
+        numberList.Add(int.Parse(Console.ReadLine()));
+        var numberFour = numberList[3];
+        
+        Console.WriteLine("Write the number you want to check: ");
+        number = int.Parse(Console.ReadLine());
+        var num = 0;
+       for(var i=0; i<4; i++){
+           for(var j=i+1; j<4; j++){
+                num = numberList[i] + numberList[j];
+           }
+       }
+       if(num == number){
+        Console.WriteLine("True");
+        }
+        else{
+           Console.WriteLine("False");
+        }
+    }
+}
